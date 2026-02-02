@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Poppins, Sacramento } from "next/font/google"; // Sacramento looks similar to the signature font
+import { Geist, Geist_Mono, Sacramento } from "next/font/google"; // Sacramento looks similar to the signature font
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -12,12 +12,6 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
-const poppins = Poppins({
-    weight: ['300', '400', '500', '600', '700'],
-    subsets: ['latin'],
-    variable: '--font-poppins',
-});
-
 const sacramento = Sacramento({
     weight: ['400'],
     subsets: ['latin'],
@@ -27,13 +21,16 @@ const sacramento = Sacramento({
 export const metadata = {
     title: "Shubham Paghadal - Portfolio",
     description: "Senior Designer & Developer",
+    icons: {
+        icon: "/assets/Header_logo.png",
+    },
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${sacramento.variable} antialiased bg-[#1D1D20] text-white font-sans`}
+                className={`${geistSans.variable} ${geistMono.variable} ${sacramento.variable} antialiased bg-background text-white font-sans`}
             >
                 <Navbar />
                 {children}
