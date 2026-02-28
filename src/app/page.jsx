@@ -2,12 +2,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { SiUpwork, SiGreensock } from 'react-icons/si';
+import { SiUpwork, SiGreensock, SiNextdotjs } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 import { FaGem, FaLinkedinIn, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
 import banner_img from '../../public/assets/banner_img.png'
 import WorkTogether from '@/components/WorkTogether';
 import Footer from '@/components/Footer';
+import dental_bridge from '../../public/assets/project_photos/GPO_1.jpg'
+import dental_bridge_2 from '../../public/assets/project_photos/GPO_2.jpg'
+import asap_fabric from '../../public/assets/project_photos/ASAP_1.png'
+import asap_fabric_2 from '../../public/assets/project_photos/ASAP_2.png'
+import rankers_erp from '../../public/assets/project_photos/Rankers_1.jpg'
+import rankers_erp_2 from '../../public/assets/project_photos/Rankers_2.jpg'
+import ProjectSection from '@/components/ProjectSection';
+
 
 export default function Home() {
     const fadeInUp = {
@@ -76,7 +84,7 @@ export default function Home() {
                     </motion.h1>
 
                     <motion.p variants={fadeInUp} className="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed px-4 lg:px-0 max-[1200px]:w-[95%]">
-                        Since beginning my journey as a Frontend Software Engineer 1.5 years ago, I’ve worked on building responsive and user-friendly web applications. I’ve collaborated with teams to develop multiple websites including e-commerce platforms, doctor portals, and business management systems.
+                        Since beginning my journey as a Frontend Software Engineer 1 year ago, I’ve worked on building responsive and user-friendly web applications. I’ve collaborated with teams to develop multiple websites including e-commerce platforms, doctor portals, and business management systems.
                     </motion.p>
 
                     <motion.div variants={fadeInUp} className="flex flex-col items-center lg:items-start gap-2 pt-2 sm:pt-4">
@@ -299,7 +307,7 @@ export default function Home() {
                             { name: 'React.js', icon: 'React', color: 'brand-green', experience: '1.5 Yrs', position: 'top-[8%] left-0 sm:left-[-5%] lg:left-[-8%]', delay: 0.6 },
                             { name: 'JavaScript', icon: 'JS', color: 'brand-yellow', experience: 'Expert', position: 'top-[32%] right-0 sm:right-[-5%] lg:right-[-8%]', delay: 0.8 },
                             { name: 'VS Code', icon: <VscVscode className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />, color: 'blue-500', experience: 'Daily', position: 'bottom-[28%] left-0 sm:left-[-5%] lg:left-[-8%]', delay: 1.0 },
-                            { name: 'GSAP', icon: <SiGreensock className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />, color: 'green-500', experience: 'Pro', position: 'bottom-[8%] right-0 sm:right-[-5%] lg:right-[-8%]', delay: 1.2 }
+                            { name: 'Next JS', icon: <SiNextdotjs className="w-5 h-5 sm:w-6 sm:h-6 text-Balck-400" />, color: 'green-500', experience: 'Pro', position: 'bottom-[8%] right-0 sm:right-[-5%] lg:right-[-8%]', delay: 1.2 }
                         ].map((skill, index) => (
                             <motion.div
                                 key={skill.name}
@@ -450,210 +458,73 @@ export default function Home() {
                 </motion.div>
             </section>
 
-            {/* Project 1 Section */}
-            <section className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 sm:py-24 lg:py-32 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-                    {/* Left Text Content */}
-                    <motion.div
-                        className="w-full lg:w-1/3 space-y-6 sm:space-y-8"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <div className="flex items-center gap-2 group cursor-pointer justify-center lg:justify-start">
-                            <span className="h-[2px] w-8 bg-brand-green group-hover:w-12 transition-all duration-300"></span>
-                            <span className="text-brand-green font-medium tracking-wide text-xs sm:text-sm uppercase">Project 1</span>
-                        </div>
+            {/* Projects Section */}
+            <div className="space-y-0">
+                {[
+                    {
+                        id: 1,
+                        category: "Project 1",
+                        title: "DentalBridge GPO",
+                        description: `Implemented subscription functionality, including paid and free plans for doctors and vendors.
 
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center lg:text-left">
-                            Meclinic
-                        </h2>
+➤ Worked on group chat features, enabling real-time communication within the medical community.
 
-                        <p className="text-gray-400 text-base sm:text-lg leading-relaxed text-center lg:text-left">
-                            The technological revolution is changing aspect of our lives, and the fabric of society itself. it&#39;s also changing the way we learn and what we learn.
-                        </p>
+➤ Developed a community feed, allowing users to create posts, like, and share content to drive engagement.
 
-                        <div className="flex justify-center lg:justify-start">
-                            <a href="#" className="flex items-center gap-3 text-brand-yellow hover:text-white transition-colors duration-300 font-medium group text-base sm:text-lg">
-                                <span className="bg-brand-yellow/10 p-2 rounded-full group-hover:bg-brand-yellow/20 transition-colors">
-                                    <FaGem className="text-[10px] transform" />
-                                </span>
-                                Read More
-                            </a>
-                        </div>
-                    </motion.div>
+➤ Collaborated with backend APIs to manage subscriptions, content, and community interactions efficiently.`,
+                        images: [dental_bridge, dental_bridge_2],
+                        badge: "LIVE",
+                        badgeColor: "brand-green"
+                    },
+                    {
+                        id: 2,
+                        category: "Project 2",
+                        title: "ASAP Fabric",
+                        description: `This project is a premium Fabric Customization Platform focused on traditional and modern menswear like Kurta, Koti, Jodhpuri, Indo-Western, Pants, Suits, and Shirts..
 
-                    {/* Right Image/Presentation Box */}
-                    <motion.div
-                        className="w-full lg:w-2/3 lg:h-[600px]"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <div className="bg-[#4B4B53] rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:p-16 relative overflow-hidden sm:overflow-visible h-[300px] sm:h-[450px] lg:h-full flex items-center justify-center transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
+ ➤ It allows users to fully personalize their outfits with advanced customization options.
+Customers can select fabric, colors, and styles according to their preference.
 
-                            {/* Mockup Images */}
-                            <div className="relative w-full h-full perspective-1000">
-                                {/* Back Image */}
-                                <motion.div
-                                    className="absolute top-5 right-0 lg:right-[-10%] w-[80%] rounded-lg overflow-hidden shadow-2xl z-10 opacity-60"
-                                    initial={{ transform: "rotateY(-15deg) rotateZ(5deg) translateY(50px)" }}
-                                    whileInView={{ transform: "rotateY(-15deg) rotateZ(5deg) translateY(0px)" }}
-                                    transition={{ duration: 1, ease: "easeOut" }}
-                                >
-                                    <img src="https://cdn.dribbble.com/users/1615584/screenshots/15710688/media/6c7a10fb5944358bb75d9e567104b281.jpg" alt="Meclinic Screen 1" className="w-full object-cover" />
-                                </motion.div>
+➤ The platform includes detailed customization features such as lapel style, back design view, pocket style, sleeve buttons, and lining color selection.
 
-                                {/* Front Image */}
-                                <motion.div
-                                    className="absolute top-[15%] left-0 lg:left-[-5%] w-[70%] rounded-lg overflow-hidden shadow-2xl z-20 border-2 sm:border-4 border-white/10"
-                                    initial={{ transform: "rotateY(10deg) rotateZ(-5deg) translateY(80px)" }}
-                                    whileInView={{ transform: "rotateY(10deg) rotateZ(-5deg) translateY(0px)" }}
-                                    transition={{ duration: 1.2, ease: "easeOut" }}
-                                >
-                                    <img src="https://cdn.dribbble.com/users/4859185/screenshots/18329618/media/2069792437651a5116757b3f9dc36f0a.png" alt="Meclinic Screen 2" className="w-full object-cover" />
-                                </motion.div>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+➤ The system enhances user experience with interactive design selection and real-time updates.
 
-            {/* Project 2 Section - Reverse Layout */}
-            <section className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 sm:py-24 lg:py-32 relative z-10 lg:mb-20">
-                {/* Background Decoration */}
-                <div className="absolute top-[-5%] right-[-5%] w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] rounded-full border-[20px] sm:border-[30px] border-brand-green/10 blur-sm z-0 opacity-50"></div>
+➤ Button customization is also available, including style, placement, and contrast options.`,
+                        images: [asap_fabric_2, asap_fabric,],
+                        layout: "reverse",
+                        badge: "NEW",
+                        badgeColor: "brand-yellow"
+                    },
+                    {
+                        id: 3,
+                        category: "Project 3",
+                        title: "Rankers ERP",
+                        description: `Rankers ERP is a comprehensive Salt Management System designed to streamline and manage the complete salt business lifecycle.
 
-                <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24 relative z-10">
-                    {/* Text Content */}
-                    <motion.div
-                        className="w-full lg:w-1/3 space-y-6 sm:space-y-8"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <div className="flex items-center gap-2 group cursor-pointer justify-center lg:justify-start">
-                            <span className="h-[2px] w-8 bg-brand-green group-hover:w-12 transition-all duration-300"></span>
-                            <span className="text-brand-green font-medium tracking-wide text-xs sm:text-sm uppercase">Project 2</span>
-                        </div>
+                        ➤ The platform tracks salt supply from one location to another, including truck dispatch and delivery monitoring
 
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center lg:text-left">
-                            Getfizzy
-                        </h2>
+                        ➤ It manages detailed records of raw salt, washed salt, and different salt grades. The system records truck capacity, how much salt is loaded per truck, and delivery status in real time.
 
-                        <p className="text-gray-400 text-base sm:text-lg leading-relaxed text-center lg:text-left">
-                            Modern beverage tracking application focusing on wellness and hydration. Built with cutting edge technologies for a seamless user experience.
-                        </p>
+                        ➤ The ERP maintains supplier details, location tracking, truck information, and selected delivery points. Inventory modules monitor total stock, available quantity, and in-process salt.
 
-                        <div className="flex justify-center lg:justify-start">
-                            <a href="#" className="flex items-center gap-3 text-brand-yellow hover:text-white transition-colors duration-300 font-medium group text-base sm:text-lg">
-                                <span className="bg-brand-yellow/10 p-2 rounded-full group-hover:bg-brand-yellow/20 transition-colors">
-                                    <FaGem className="text-[10px] transform" />
-                                </span>
-                                Read More
-                            </a>
-                        </div>
-                    </motion.div>
+                        ➤ The platform also tracks salt filtering processes and maintenance records. Overall, the system provides centralized control, transparency, and efficient management of the entire salt supply chain business.
 
-                    {/* Image/Presentation Box */}
-                    <motion.div
-                        className="w-full lg:w-2/3 lg:h-[600px]"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <div className="bg-[#4B4B53] rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:p-16 relative overflow-hidden h-[300px] sm:h-[450px] lg:h-full flex items-center justify-center transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
-                            <div className="relative w-full h-full perspective-1000 flex items-center justify-center">
-                                <motion.div
-                                    className="w-[90%] sm:w-[85%] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl z-20"
-                                    initial={{ scale: 0.9, opacity: 0 }}
-                                    whileInView={{ scale: 1, opacity: 1 }}
-                                    transition={{ duration: 0.8 }}
-                                >
-                                    <img src="https://cdn.dribbble.com/users/4859185/screenshots/19326442/media/6a024c00320df686f06584281313460e.png" alt="Getfizzy App" className="w-full object-cover" />
-                                </motion.div>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
 
-            {/* Project 3 Section - Standard Layout */}
-            <section className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 sm:py-24 lg:py-32 relative z-10">
-                {/* Background Decoration */}
-                <div className="absolute bottom-[-5%] left-[-5%] w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] rounded-full border-[20px] sm:border-[30px] border-brand-yellow/10 blur-sm z-0 opacity-50"></div>
+                        `
 
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 relative z-10">
-                    {/* Left Text Content */}
-                    <motion.div
-                        className="w-full lg:w-1/3 space-y-6 sm:space-y-8"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <div className="flex items-center gap-2 group cursor-pointer justify-center lg:justify-start">
-                            <span className="h-[2px] w-8 bg-brand-green group-hover:w-12 transition-all duration-300"></span>
-                            <span className="text-brand-green font-medium tracking-wide text-xs sm:text-sm uppercase">Project 3</span>
-                        </div>
 
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center lg:text-left">
-                            The Trailer Part Outlet
-                        </h2>
-
-                        <p className="text-gray-400 text-base sm:text-lg leading-relaxed text-center lg:text-left">
-                            A comprehensive e-commerce platform for trailer parts and accessories. Optimized for high performance and conversion.
-                        </p>
-
-                        <div className="flex justify-center lg:justify-start">
-                            <a href="#" className="flex items-center gap-3 text-brand-yellow hover:text-white transition-colors duration-300 font-medium group text-base sm:text-lg">
-                                <span className="bg-brand-yellow/10 p-2 rounded-full group-hover:bg-brand-yellow/20 transition-colors">
-                                    <FaGem className="text-[10px] transform" />
-                                </span>
-                                Read More
-                            </a>
-                        </div>
-                    </motion.div>
-
-                    {/* Right Image/Presentation Box */}
-                    <motion.div
-                        className="w-full lg:w-2/3 lg:h-[600px]"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <div className="bg-[#4B4B53] rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:p-16 relative overflow-hidden h-[300px] sm:h-[450px] lg:h-full flex items-center justify-center transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
-                            {/* Mockup Images */}
-                            <div className="relative w-full h-full perspective-1000 flex items-center justify-center">
-                                {/* Floating Top Image */}
-                                <motion.div
-                                    className="absolute top-5 right-5 w-[60%] rounded-lg overflow-hidden shadow-xl z-10"
-                                    initial={{ y: 20, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: 0.8 }}
-                                >
-                                    <img src="https://cdn.dribbble.com/users/2399102/screenshots/15655755/media/31422791485202860c238b776263fa7a.png" alt="Project 3 Detail" className="w-full object-cover" />
-                                </motion.div>
-
-                                {/* Main Bottom Image */}
-                                <motion.div
-                                    className="absolute bottom-5 left-5 w-[70%] rounded-lg overflow-hidden shadow-2xl z-20"
-                                    initial={{ y: 40, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: 1, delay: 0.2 }}
-                                >
-                                    <img src="https://cdn.dribbble.com/users/685954/screenshots/15682896/media/078f1418c3931bb48873752df7185ad1.png" alt="Project 3 Main" className="w-full object-cover" />
-                                </motion.div>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+                        ,
+                        images: [rankers_erp, rankers_erp_2],
+                        badge: "LIVE",
+                        badgeColor: "brand-green"
+                    }
+                ].map((project) => (
+                    <ProjectSection
+                        key={project.id}
+                        {...project}
+                    />
+                ))}
+            </div>
 
             <div className="flex justify-center pb-32">
                 <Link href="/portfolio">

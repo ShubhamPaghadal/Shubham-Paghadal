@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaGem, FaLinkedinIn, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
 import WorkTogether from '@/components/WorkTogether';
 import Footer from '@/components/Footer';
+import ProjectSection from '@/components/ProjectSection';
 
 export default function Portfolio() {
     const projects = [
@@ -97,93 +98,21 @@ export default function Portfolio() {
             </section>
 
             {/* Projects Loop */}
-            {projects.map((project, idx) => (
-                <section key={project.id} className="max-w-[1400px] mx-auto px-4 sm:px-8 py-20 lg:py-32 relative z-10">
-                    {/* Background Decorations for some projects */}
-                    {project.id === 2 && (
-                        <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] rounded-full border-30 border-brand-green/20 blur-sm z-0 opacity-50"></div>
-                    )}
-                    {project.id === 3 && (
-                        <div className="absolute bottom-[-10%] left-[-5%] w-[300px] h-[300px] rounded-full border-30 border-brand-yellow/20 blur-sm z-0 opacity-50"></div>
-                    )}
-
-                    <div className={`flex flex-col ${project.layout === 'reverse' ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-16 lg:gap-24 relative z-10`}>
-                        {/* Text Content */}
-                        <motion.div
-                            className="lg:w-1/3 space-y-8"
-                            initial={{ opacity: 0, x: project.layout === 'reverse' ? 50 : -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <div className="flex items-center gap-2 group cursor-pointer">
-                                <span className="h-[2px] w-8 bg-brand-green group-hover:w-12 transition-all duration-300"></span>
-                                <span className="text-brand-green font-medium tracking-wide text-sm uppercase">{project.category}</span>
-                            </div>
-
-                            <h2 className="text-4xl lg:text-5xl font-bold text-white">
-                                {project.title}
-                            </h2>
-
-                            <p className="text-gray-400 text-lg leading-relaxed">
-                                {project.description}
-                            </p>
-
-                            <a href="#" className="flex items-center gap-3 text-brand-yellow hover:text-white transition-colors duration-300 font-medium group text-lg">
-                                <span className="bg-brand-yellow/10 p-2 rounded-full group-hover:bg-brand-yellow/20 transition-colors">
-                                    <FaGem className="text-xs transform" />
-                                </span>
-                                Read More
-                            </a>
-                        </motion.div>
-
-                        {/* Image/Presentation Box */}
-                        <motion.div
-                            className="lg:w-2/3 w-full"
-                            initial={{ opacity: 0, x: project.layout === 'reverse' ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                        >
-                            <div className="bg-[#4B4B53] rounded-[3rem] p-12 lg:p-16 relative overflow-visible h-[500px] lg:h-[600px] flex items-center justify-center transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
-                                <div className="relative w-full h-full perspective-1000 flex items-center justify-center">
-                                    {project.images.length > 1 ? (
-                                        <>
-                                            {/* Standard two-image overlap style */}
-                                            <motion.div
-                                                className="absolute top-10 right-0 lg:right-[-10%] w-[80%] rounded-lg overflow-hidden shadow-2xl z-10 opacity-60"
-                                                initial={{ transform: "rotateY(-15deg) rotateZ(5deg) translateY(50px)" }}
-                                                whileInView={{ transform: "rotateY(-15deg) rotateZ(5deg) translateY(0px)" }}
-                                                transition={{ duration: 1, ease: "easeOut" }}
-                                            >
-                                                <img src={project.images[0]} alt={`${project.title} 1`} className="w-full object-cover" />
-                                            </motion.div>
-                                            <motion.div
-                                                className="absolute top-[20%] left-0 lg:left-[-5%] w-[70%] rounded-lg overflow-hidden shadow-2xl z-20 border-4 border-white/10"
-                                                initial={{ transform: "rotateY(10deg) rotateZ(-5deg) translateY(80px)" }}
-                                                whileInView={{ transform: "rotateY(10deg) rotateZ(-5deg) translateY(0px)" }}
-                                                transition={{ duration: 1.2, ease: "easeOut" }}
-                                            >
-                                                <img src={project.images[1]} alt={`${project.title} 2`} className="w-full object-cover" />
-                                            </motion.div>
-                                        </>
-                                    ) : (
-                                        /* Single image style like Getfizzy */
-                                        <motion.div
-                                            className="w-[90%] rounded-2xl overflow-hidden shadow-2xl z-20"
-                                            initial={{ scale: 0.9, opacity: 0 }}
-                                            whileInView={{ scale: 1, opacity: 1 }}
-                                            transition={{ duration: 0.8 }}
-                                        >
-                                            <img src={project.images[0]} alt={project.title} className="w-full object-cover" />
-                                        </motion.div>
-                                    )}
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                </section>
-            ))}
+            <div className="space-y-0">
+                {projects.map((project) => (
+                    <ProjectSection
+                        key={project.id}
+                        id={project.id}
+                        category={project.category}
+                        title={project.title}
+                        description={project.description}
+                        images={project.images}
+                        layout={project.layout}
+                        badge={project.id % 2 === 0 ? "NEW" : "LIVE"}
+                        badgeColor={project.id % 2 === 0 ? "brand-yellow" : "brand-green"}
+                    />
+                ))}
+            </div>
 
             {/* Lets Work Together Section */}
             <WorkTogether />
