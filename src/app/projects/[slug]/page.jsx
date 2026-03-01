@@ -227,8 +227,8 @@ export default function ProjectDetailPage({ params }) {
                                                 key={idx}
                                                 onClick={() => setCurrentSlide(idx)}
                                                 className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 cursor-pointer ${currentSlide === idx
-                                                        ? 'bg-brand-green w-6 sm:w-8'
-                                                        : 'bg-white/30 hover:bg-white/50'
+                                                    ? 'bg-brand-green w-6 sm:w-8'
+                                                    : 'bg-white/30 hover:bg-white/50'
                                                     }`}
                                             />
                                         ))}
@@ -325,8 +325,8 @@ export default function ProjectDetailPage({ params }) {
                                     key={index}
                                     onClick={() => setScreenshotSlide(index)}
                                     className={`relative w-16 h-10 sm:w-24 sm:h-14 lg:w-28 lg:h-16 rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all duration-300 cursor-pointer ${screenshotSlide === index
-                                            ? 'border-brand-green shadow-[0_0_15px_rgba(91,194,130,0.4)] scale-105'
-                                            : 'border-white/10 opacity-50 hover:opacity-80 hover:border-white/20'
+                                        ? 'border-brand-green shadow-[0_0_15px_rgba(91,194,130,0.4)] scale-105'
+                                        : 'border-white/10 opacity-50 hover:opacity-80 hover:border-white/20'
                                         }`}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.98 }}
@@ -527,8 +527,8 @@ export default function ProjectDetailPage({ params }) {
                                         <motion.button
                                             key={index}
                                             className={`w-8 h-5 sm:w-12 sm:h-8 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all duration-300 cursor-pointer ${lightboxIndex === index
-                                                    ? 'border-brand-green shadow-[0_0_10px_rgba(91,194,130,0.4)]'
-                                                    : 'border-transparent opacity-50 hover:opacity-80'
+                                                ? 'border-brand-green shadow-[0_0_10px_rgba(91,194,130,0.4)]'
+                                                : 'border-transparent opacity-50 hover:opacity-80'
                                                 }`}
                                             onClick={(e) => { e.stopPropagation(); setLightboxIndex(index); }}
                                             whileHover={{ scale: 1.1 }}
