@@ -36,14 +36,22 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-100 px-4 sm:px-8 transition-all duration-300 ${scrolled || isOpen ? 'py-4 bg-background/95 backdrop-blur-md border-b border-white/5 shadow-lg' : 'py-6 bg-transparent'
+            <nav className={`fixed top-0 left-0 right-0 z-100 px-4 sm:px-8 transition-all duration-500 ${scrolled || isOpen ? 'py-3 bg-background/90 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]' : 'py-5 sm:py-6 bg-transparent'
                 }`}>
                 <div className="max-w-[1400px] mx-auto flex items-center justify-between">
                     {/* Logo Area */}
                     <div className="shrink-0 z-110">
-                        <Link href="/" className="flex items-center gap-1 group" onClick={() => setIsOpen(false)}>
-                            <img src={header_logo.src} alt="S" className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 font-script group-hover:drop-shadow-[0_0_8px_rgba(91,194,130,0.5)] transition-all" />
-                            <span className="text-lg sm:text-xl md:text-2xl font-script pt-2 group-hover:text-gray-200 transition-colors whitespace-nowrap">shubham Paghadal</span>
+                        <Link href="/" className="flex items-center gap-1.5 group" onClick={() => setIsOpen(false)}>
+                            <motion.img
+                                src={header_logo.src}
+                                alt="S"
+                                className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 group-hover:drop-shadow-[0_0_12px_rgba(91,194,130,0.6)] transition-all duration-500"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            />
+                            <span className="text-xl sm:text-2xl md:text-[30px] logo-font text-white pt-1 group-hover:text-brand-green transition-colors duration-500 whitespace-nowrap">
+                                Shubham Paghadal
+                            </span>
                         </Link>
                     </div>
 
@@ -135,9 +143,9 @@ export default function Navbar() {
                     >
                         {/* Overlay Header */}
                         <div className="flex items-center justify-between px-4 sm:px-8 py-6 border-b border-white/5">
-                            <div className="flex items-center gap-1">
+                            <div className="flex items-center gap-1.5">
                                 <img src={header_logo.src} alt="S" className="w-9 h-9 sm:w-11" />
-                                <span className="text-lg sm:text-xl font-script pt-2 text-white">shubham Paghadal</span>
+                                <span className="text-xl sm:text-2xl logo-font pt-1 text-white">shubham Paghadal</span>
                             </div>
 
                             <button

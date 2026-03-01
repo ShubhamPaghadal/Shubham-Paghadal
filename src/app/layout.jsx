@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Sacramento } from "next/font/google"; // Sacramento looks similar to the signature font
+import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
-const sacramento = Sacramento({
+const greatVibes = Great_Vibes({
     weight: ['400'],
     subsets: ['latin'],
-    variable: '--font-sacramento',
+    variable: '--font-great-vibes',
 });
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${sacramento.variable} antialiased bg-background text-white font-sans`}
+                className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} antialiased bg-background text-white font-sans`}
             >
                 <Navbar />
                 {children}

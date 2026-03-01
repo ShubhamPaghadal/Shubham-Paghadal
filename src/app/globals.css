@@ -3,7 +3,6 @@
 @theme {
   --font-sans: "Comic Sans MS", "Comic Sans", "Apple Chancery", "Marker Felt", cursive;
   --font-mono: var(--font-geist-mono);
-  --font-script: var(--font-sacramento), cursive;
 
   --color-background: #1D1D20;
   --color-foreground: #ededed;
@@ -22,4 +21,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* Logo text - Great Vibes elegant script font */
+.logo-font {
+  font-family: var(--font-great-vibes), cursive !important;
 }
