@@ -8,6 +8,7 @@ import rankers_erp_2 from '../../public/assets/project_photos/Rankers_2.jpg';
 const projectsData = [
     {
         id: 1,
+        slug: "Dental-bridge-GPO",
         category: "Project 1",
         title: "DentalBridge GPO",
         description: `Implemented subscription functionality, including paid and free plans for doctors and vendors.
@@ -19,10 +20,13 @@ const projectsData = [
 ➤ Collaborated with backend APIs to manage subscriptions, content, and community interactions efficiently.`,
         images: [dental_bridge, dental_bridge_2],
         badge: "LIVE",
-        badgeColor: "brand-green"
+        badgeColor: "brand-green",
+        liveLink: "#",
+        technologies: ["React.js", "Next.js", "Tailwind CSS", "Node.js", "MongoDB"]
     },
     {
         id: 2,
+        slug: "ASAP-Fabric",
         category: "Project 2",
         title: "ASAP Fabric",
         description: `This project is a premium Fabric Customization Platform focused on traditional and modern menswear like Kurta, Koti, Jodhpuri, Indo-Western, Pants, Suits, and Shirts..
@@ -38,27 +42,29 @@ Customers can select fabric, colors, and styles according to their preference.
         images: [asap_fabric_2, asap_fabric],
         layout: "reverse",
         badge: "NEW",
-        badgeColor: "brand-yellow"
+        badgeColor: "brand-yellow",
+        liveLink: "#",
+        technologies: ["React.js", "JavaScript", "CSS3", "REST API", "Firebase"]
     },
     {
         id: 3,
+        slug: "Rankers-ERP",
         category: "Project 3",
         title: "Rankers ERP",
         description: `Rankers ERP is a comprehensive Salt Management System designed to streamline and manage the complete salt business lifecycle.
 
-                        ➤ The platform tracks salt supply from one location to another, including truck dispatch and delivery monitoring
+➤ The platform tracks salt supply from one location to another, including truck dispatch and delivery monitoring.
 
-                        ➤ It manages detailed records of raw salt, washed salt, and different salt grades. The system records truck capacity, how much salt is loaded per truck, and delivery status in real time.
+➤ It manages detailed records of raw salt, washed salt, and different salt grades. The system records truck capacity, how much salt is loaded per truck, and delivery status in real time.
 
-                        ➤ The ERP maintains supplier details, location tracking, truck information, and selected delivery points. Inventory modules monitor total stock, available quantity, and in-process salt.
+➤ The ERP maintains supplier details, location tracking, truck information, and selected delivery points. Inventory modules monitor total stock, available quantity, and in-process salt.
 
-                        ➤ The platform also tracks salt filtering processes and maintenance records. Overall, the system provides centralized control, transparency, and efficient management of the entire salt supply chain business.
-
-
-                        `,
+➤ The platform also tracks salt filtering processes and maintenance records. Overall, the system provides centralized control, transparency, and efficient management of the entire salt supply chain business.`,
         images: [rankers_erp, rankers_erp_2],
         badge: "LIVE",
-        badgeColor: "brand-green"
+        badgeColor: "brand-green",
+        liveLink: "#",
+        technologies: ["React.js", "Next.js", "Tailwind CSS", "Express.js", "MySQL"]
     }
 ];
 
