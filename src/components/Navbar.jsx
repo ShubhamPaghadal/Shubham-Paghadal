@@ -89,7 +89,7 @@ export default function Navbar() {
                         </div>
 
                         <Link href="/contact">
-                            <button className="bg-brand-yellow text-gray-900 font-semibold px-6 py-2.5 rounded-lg hover:bg-[#ebd04f] transition-colors shadow-[0_0_20px_rgba(252,203,110,0.3)] hover:shadow-[0_0_25px_rgba(252,203,110,0.5)] transform hover:scale-105 duration-200">
+                            <button className="bg-brand-yellow text-gray-900 font-semibold px-6 py-2.5 rounded-lg hover:bg-[#ebd04f] transition-colors shadow-[0_0_20px_rgba(252,203,110,0.3)] hover:shadow-[0_0_25px_rgba(252,203,110,0.5)] transform hover:scale-105 duration-200 cursor-pointer">
                                 Contact Me
                             </button>
                         </Link>
