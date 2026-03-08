@@ -87,7 +87,7 @@ export default function Home() {
                             <span className="text-white text-base sm:text-lg font-normal">100% Job Success</span>
                         </div>
                         <div className="flex items-start">
-                            <div className="bg-brand-dark hover:bg-[#333] transition-colors border border-white/5 rounded-full px-1 py-1 pr-4 flex items-center gap-2 cursor-pointer mt-2">
+                            <div className="btn-fill-slide bg-brand-dark hover:bg-[#333] transition-colors border border-white/5 rounded-full px-1 py-1 pr-4 flex items-center gap-2 cursor-pointer mt-2">
                                 <div className="bg-pink-600 p-1 rounded-full">
                                     <FaGem className="text-white text-[10px]" />
                                 </div>
@@ -344,7 +344,7 @@ export default function Home() {
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300"
+                        className="btn-shimmer btn-glow-border bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300"
                     >
                         View All
                     </motion.button>

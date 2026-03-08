@@ -49,9 +49,9 @@ export default function Footer() {
                                 href={href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/5 hover:bg-brand-green hover:border-brand-green/30 text-gray-400 hover:text-white group transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(91,194,130,0.3)]"
+                                className="social-icon-fill w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/5 hover:border-brand-green/30 text-gray-400 hover:text-white group transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(91,194,130,0.3)]"
                             >
-                                <Icon size={18} className="group-hover:scale-110 transition-transform duration-300" />
+                                <Icon size={18} className="relative z-10 group-hover:scale-110 transition-transform duration-300" />
                             </a>
                         ))}
                     </div>

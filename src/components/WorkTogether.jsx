@@ -34,7 +34,7 @@ export default function WorkTogether() {
                     </p>
 
                     <div className="pt-4">
-                        <Link href="/contact" className="inline-block bg-brand-yellow hover:bg-[#f0c05a] text-gray-900 font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl text-base sm:text-lg transition-all shadow-lg transform hover:scale-105">
+                        <Link href="/contact" className="btn-shimmer btn-pulse-ring inline-block bg-brand-yellow hover:bg-[#f0c05a] text-gray-900 font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl text-base sm:text-lg transition-all shadow-lg transform hover:scale-105">
                             Contact Me
                         </Link>
                     </div>

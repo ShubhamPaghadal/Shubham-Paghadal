@@ -63,7 +63,7 @@ export default function Contact() {
                         className="w-full lg:w-1/3 space-y-10"
                     >
                         <div className="space-y-8">
-                            <div className="flex items-start gap-5">
+                            <div className="contact-row-hover flex items-start gap-5">
                                 <div className="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center shrink-0 border border-brand-green/20">
                                     <FaEnvelope className="text-brand-green text-xl" />
                                 </div>
@@ -75,7 +75,7 @@ export default function Contact() {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-5">
+                            <div className="contact-row-hover flex items-start gap-5">
                                 <div className="w-12 h-12 rounded-2xl bg-brand-yellow/10 flex items-center justify-center shrink-0 border border-brand-yellow/20">
                                     <FaPhoneAlt className="text-brand-yellow text-xl" />
                                 </div>
@@ -87,7 +87,7 @@ export default function Contact() {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-5">
+                            <div className="contact-row-hover flex items-start gap-5">
                                 <div className="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center shrink-0 border border-brand-green/20">
                                     <FaMapMarkerAlt className="text-brand-green text-xl" />
                                 </div>
@@ -104,14 +104,14 @@ export default function Contact() {
                         <div className="flex items-center justify-center gap- pt-10 border-t border-white/5">
                             <h3 className="text-gray-500 text-sm font-medium uppercase tracking-wider  mr-2 ">Follow Me :-  </h3>
                             <div className="flex gap-4">
-                                <a href="https://www.linkedin.com/in/paghadal-shubham-4b0246380/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/paghadal-shubham-4b0246380/" target="_blank" rel="noopener noreferrer" className="link-underline-draw hover:text-brand-yellow transition-colors duration-300">
                                     <FaLinkedinIn className="text-brand-green text-xl" />
                                 </a>
 
-                                <a href="https://github.com/ShubhamPaghadal" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/ShubhamPaghadal" target="_blank" rel="noopener noreferrer" className="link-underline-draw hover:text-brand-yellow transition-colors duration-300">
                                     <FaGithub className="text-brand-green text-xl" />
                                 </a>
-                                <a href="https://www.instagram.com/shubham_paghadal_/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/shubham_paghadal_/" target="_blank" rel="noopener noreferrer" className="link-underline-draw hover:text-brand-yellow transition-colors duration-300">
                                     <FaInstagram className="text-brand-green text-xl" />
                                 </a>
                             </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                                     type="text"
                                     id="name"
                                     placeholder="e.g. John Doe"
-                                    className="w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60"
+                                    className="input-glow w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60"
                                 />
                             </div>
 
@@ -142,7 +142,7 @@ export default function Contact() {
                                     type="email"
                                     id="email"
                                     placeholder="e.g. john@example.com"
-                                    className="w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60"
+                                    className="input-glow w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60"
                                 />
                             </div>
 
@@ -152,7 +152,7 @@ export default function Contact() {
                                     type="text"
                                     id="subject"
                                     placeholder="How can I help you?"
-                                    className="w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60"
+                                    className="input-glow w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60"
                                 />
                             </div>
 
@@ -162,7 +162,7 @@ export default function Contact() {
                                     id="message"
                                     rows="6"
                                     placeholder="Write your message here..."
-                                    className="w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60 resize-none"
+                                    className="input-glow w-full bg-brand-dark/40 border border-white/5 rounded-2xl px-6 py-4 outline-none focus:border-brand-green/50 transition-all text-white placeholder:text-gray-600 focus:bg-brand-dark/60 resize-none"
                                 ></textarea>
                             </div>
 
@@ -171,7 +171,7 @@ export default function Contact() {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="button"
-                                    className="inline-flex items-center justify-center gap-3 bg-brand-yellow text-brand-dark font-bold px-10 py-5 rounded-2xl text-lg hover:shadow-[0_0_30px_rgba(252,203,110,0.4)] transition-all group"
+                                    className="btn-shimmer btn-glow-border inline-flex items-center justify-center gap-3 bg-brand-yellow text-brand-dark font-bold px-10 py-5 rounded-2xl text-lg hover:shadow-[0_0_30px_rgba(252,203,110,0.4)] transition-all group"
                                 >
                                     <span>Send Message</span>
                                     <FaPaperPlane className="text-sm transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

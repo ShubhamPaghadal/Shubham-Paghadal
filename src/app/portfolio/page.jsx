@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import WorkTogether from '@/components/WorkTogether';
 import Footer from '@/components/Footer';
 import AllProjects from '@/components/AllProjects';
+import PortfolioProjects from '@/components/PortfolioProjects';
 
 export default function Portfolio() {
     return (
@@ -30,6 +31,9 @@ export default function Portfolio() {
 
             {/* Projects Loop */}
             <AllProjects />
+
+            {/* Additional Portfolio Projects */}
+            <PortfolioProjects />
 
             {/* Lets Work Together Section */}
             <WorkTogether />

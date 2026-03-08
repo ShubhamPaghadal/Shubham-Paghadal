@@ -4,12 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { FaExternalLinkAlt, FaCode, FaPaintBrush, FaArrowLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import projectsData from '@/data/projectsData';
+import portfolioProjectsData from '@/data/portfolioProjectsData';
 import Footer from '@/components/Footer';
+
+const allProjectsData = [...projectsData, ...portfolioProjectsData];
 
 export default function ProjectDetailPage({ params }) {
     const resolvedParams = use(params);
     const { slug } = resolvedParams;
-    const project = projectsData.find((p) => p.slug === slug);
+    const project = allProjectsData.find((p) => p.slug === slug);
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [screenshotSlide, setScreenshotSlide] = useState(0);
@@ -106,7 +109,7 @@ export default function ProjectDetailPage({ params }) {
             >
                 <Link href="/">
                     <motion.span
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-green font-medium text-sm sm:text-base transition-colors duration-300 group"
+                        className="link-underline-draw inline-flex items-center gap-2 text-gray-400 hover:text-brand-green font-medium text-sm sm:text-base transition-colors duration-300 group"
                         whileHover={{ x: -5 }}
                     >
                         <FaArrowLeft className="text-xs group-hover:text-brand-green transition-colors" />
@@ -363,7 +366,7 @@ export default function ProjectDetailPage({ params }) {
                         href={project.liveLink || '#'}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative bg-gradient-to-br from-[#232328] via-[#1E1E22] to-[#1A1A1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-brand-green/30 transition-all duration-500 overflow-hidden cursor-pointer"
+                        className="btn-fill-slide group relative bg-gradient-to-br from-[#232328] via-[#1E1E22] to-[#1A1A1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-brand-green/30 transition-all duration-500 overflow-hidden cursor-pointer"
                         whileHover={{ y: -5 }}
                         transition={{ duration: 0.3 }}
                     >
@@ -393,7 +396,7 @@ export default function ProjectDetailPage({ params }) {
 
                     {/* Developed & Designed By */}
                     <motion.div
-                        className="group relative bg-gradient-to-br from-[#232328] via-[#1E1E22] to-[#1A1A1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-brand-yellow/30 transition-all duration-500 overflow-hidden"
+                        className="btn-fill-slide group relative bg-gradient-to-br from-[#232328] via-[#1E1E22] to-[#1A1A1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-brand-yellow/30 transition-all duration-500 overflow-hidden"
                         whileHover={{ y: -5 }}
                         transition={{ duration: 0.3 }}
                     >
@@ -418,7 +421,7 @@ export default function ProjectDetailPage({ params }) {
 
                     {/* Technologies Used */}
                     <motion.div
-                        className="group relative bg-gradient-to-br from-[#232328] via-[#1E1E22] to-[#1A1A1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-brand-green/30 transition-all duration-500 overflow-hidden"
+                        className="btn-fill-slide group relative bg-gradient-to-br from-[#232328] via-[#1E1E22] to-[#1A1A1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-brand-green/30 transition-all duration-500 overflow-hidden"
                         whileHover={{ y: -5 }}
                         transition={{ duration: 0.3 }}
                     >
