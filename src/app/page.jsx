@@ -97,217 +97,196 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
 
-                {/* Right Image Section - Completely Redesigned */}
+                {/* Right Image Section - Circular Design */}
                 <motion.div
-                    className="w-full lg:w-1/2 flex items-center justify-center relative mt-16 sm:mt-20 lg:mt-8 min-h-[600px] lg:min-h-[700px]"
+                    className="w-full lg:w-1/2 flex items-center justify-center relative mt-16 sm:mt-20 lg:mt-8 min-h-[500px] sm:min-h-[600px] lg:min-h-[530px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    {/* Circular Background Elements - Green + Dark Concentric Circles */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-5">
-                        {/* Outer Green Circle */}
-                        <motion.div
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[520px] sm:h-[520px] lg:w-[650px] lg:h-[650px] rounded-full border-30 sm:border-40 lg:border-50 border-brand-green/20"
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{
-                                duration: 1.5,
-                                delay: 0.2,
-                                ease: [0.34, 1.56, 0.64, 1]
-                            }}
-                        >
-                            {/* Pulsing glow */}
-                            <motion.div
-                                className="absolute inset-0 rounded-full bg-brand-green/5 blur-2xl"
-                                animate={{
-                                    scale: [1, 1.1, 1],
-                                    opacity: [0.4, 0.6, 0.4]
-                                }}
-                                transition={{
-                                    duration: 4,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                }}
-                            />
-                        </motion.div>
-
-                        {/* Inner Dark Circle */}
-                        <motion.div
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[430px] sm:h-[430px] lg:w-[540px] lg:h-[540px] rounded-full bg-background/50 backdrop-blur-sm border border-brand-green/10"
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{
-                                duration: 1.3,
-                                delay: 0.4,
-                                ease: [0.34, 1.56, 0.64, 1]
-                            }}
-                        />
-                    </div>
-
                     {/* Animated Gradient Mesh Background */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        {/* Blob Gradient 1 */}
                         <motion.div
                             className="absolute top-[10%] right-[10%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full opacity-20"
                             style={{
                                 background: 'radial-gradient(circle, rgba(91, 194, 130, 0.3) 0%, transparent 70%)',
                                 filter: 'blur(60px)'
                             }}
-                            animate={{
-                                scale: [1, 1.2, 1],
-                                x: [0, 30, 0],
-                                y: [0, -20, 0],
-                            }}
-                            transition={{
-                                duration: 8,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }}
+                            animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -20, 0] }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                         />
-
-                        {/* Blob Gradient 2 */}
                         <motion.div
                             className="absolute bottom-[15%] left-[5%] w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] rounded-full opacity-15"
                             style={{
                                 background: 'radial-gradient(circle, rgba(252, 203, 110, 0.3) 0%, transparent 70%)',
                                 filter: 'blur(50px)'
                             }}
-                            animate={{
-                                scale: [1, 1.3, 1],
-                                x: [0, -20, 0],
-                                y: [0, 30, 0],
-                            }}
-                            transition={{
-                                duration: 10,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                                delay: 1
-                            }}
-                        />
-
-                        {/* Grid Pattern Overlay */}
-                        <div
-                            className="absolute inset-0 opacity-[0.02]"
-                            style={{
-                                backgroundImage: 'linear-gradient(rgba(91, 194, 130, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(91, 194, 130, 0.5) 1px, transparent 1px)',
-                                backgroundSize: '50px 50px'
-                            }}
+                            animate={{ scale: [1, 1.3, 1], x: [0, -20, 0], y: [0, 30, 0] }}
+                            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                         />
                     </div>
 
-                    {/* Main Content Container */}
-                    <div className="relative z-10 w-full max-w-[500px] lg:max-w-[600px] px-4 sm:px-6">
+                    {/* Main Circular Content Container */}
+                    <div className="relative z-10 flex items-center justify-center">
 
-                        {/* Central Image Card with 3D Effect */}
+                        {/* Outer Glowing Ring */}
                         <motion.div
-                            className="relative group"
-                            initial={{ scale: 0.9, opacity: 0, rotateY: -15 }}
-                            animate={{ scale: 1, opacity: 1, rotateY: 0 }}
-                            transition={{
-                                duration: 1.2,
-                                delay: 0.3,
-                                ease: [0.34, 1.56, 0.64, 1]
+                            className="absolute rounded-full"
+                            style={{
+                                width: 'clamp(300px, 55vw, 420px)',
+                                height: 'clamp(300px, 55vw, 420px)',
+                                background: 'conic-gradient(from 0deg, rgba(91, 194, 130, 0.3), rgba(252, 203, 110, 0.15), rgba(91, 194, 130, 0.05), rgba(252, 203, 110, 0.15), rgba(91, 194, 130, 0.3))',
+                                filter: 'blur(25px)',
                             }}
-                            style={{ perspective: '1000px' }}
+                            animate={{ rotate: [0, 360] }}
+                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        />
+
+                        {/* Outer Decorative Ring Border */}
+                        <motion.div
+                            className="absolute rounded-full border-2 border-brand-green/15"
+                            style={{
+                                width: 'clamp(320px, 58vw, 450px)',
+                                height: 'clamp(320px, 58vw, 450px)',
+                            }}
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 1.5, delay: 0.2, ease: [0.34, 1.56, 0.64, 1] }}
+                        />
+
+                        {/* Dashed Orbital Ring - slowly rotating */}
+                        <motion.div
+                            className="absolute pointer-events-none"
+                            style={{
+                                width: 'clamp(340px, 62vw, 480px)',
+                                height: 'clamp(340px, 62vw, 480px)',
+                            }}
+                            animate={{ rotate: [0, 360] }}
+                            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
                         >
-                            {/* Geometric Accent Lines */}
-                            <motion.div
-                                className="absolute -top-6 -left-6 sm:-top-8 sm:-left-8 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 border-l-2 border-t-2 border-brand-green/40 z-0"
-                                initial={{ opacity: 0, x: -20, y: -20 }}
-                                animate={{ opacity: 1, x: 0, y: 0 }}
-                                transition={{ delay: 0.8, duration: 0.8 }}
-                            />
-
-                            <motion.div
-                                className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 border-r-2 border-b-2 border-brand-yellow/40 z-0"
-                                initial={{ opacity: 0, x: 20, y: 20 }}
-                                animate={{ opacity: 1, x: 0, y: 0 }}
-                                transition={{ delay: 0.9, duration: 0.8 }}
-                            />
-
-                            {/* Holographic Card Container */}
-                            <motion.div
-                                className="relative bg-linear-to-br from-brand-dark/40 via-brand-dark/30 to-brand-dark/40 backdrop-blur-md rounded-3xl sm:rounded-[2.5rem] p-4 sm:p-6 border border-white/10 shadow-2xl overflow-hidden"
-                                whileHover={{
-                                    scale: 1.02,
-                                    rotateY: 2,
-                                    rotateX: -2,
-                                }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                            >
-                                {/* Scanline Effect */}
-                                <motion.div
-                                    className="absolute inset-0 z-10 pointer-events-none"
-                                    style={{
-                                        backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(91, 194, 130, 0.03) 2px, rgba(91, 194, 130, 0.03) 4px)',
-                                    }}
-                                    animate={{
-                                        backgroundPosition: ['0px 0px', '0px 100px'],
-                                    }}
-                                    transition={{
-                                        duration: 3,
-                                        repeat: Infinity,
-                                        ease: "linear"
-                                    }}
-                                />
-
-                                {/* Gradient Border Glow */}
-                                <div className="absolute inset-0 rounded-3xl sm:rounded-[2.5rem] bg-gradient-to-br from-brand-green/0 via-brand-green/5 to-brand-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                                {/* Person Image */}
-                                <motion.div
-                                    className="relative"
-                                    animate={{
-                                        y: [0, -5, 0],
-                                    }}
-                                    transition={{
-                                        duration: 4,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                >
-                                    <img
-                                        src={banner_img.src}
-                                        alt="Shubham Paghadal"
-                                        className="relative w-full h-auto object-contain rounded-2xl sm:rounded-3xl"
-                                        style={{
-                                            maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
-                                            filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))'
-                                        }}
-                                    />
-                                </motion.div>
-
-                                <motion.div
-                                    className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    <motion.div
-                                        className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent"
-                                        animate={{ x: ["-100%", "200%"] }}
-                                        transition={{
-                                            duration: 1.5,
-                                            repeat: Infinity,
-                                            repeatDelay: 3,
-                                            ease: "easeInOut"
-                                        }}
-                                    />
-                                </motion.div>
-                            </motion.div>
+                            <svg className="w-full h-full" viewBox="0 0 200 200">
+                                <circle cx="100" cy="100" r="98" fill="none" stroke="url(#orbitalGrad)" strokeWidth="0.5" strokeDasharray="8 6" opacity="0.3" />
+                                <defs>
+                                    <linearGradient id="orbitalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stopColor="#5bc282" />
+                                        <stop offset="50%" stopColor="#fccb6e" />
+                                        <stop offset="100%" stopColor="#5bc282" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
                         </motion.div>
 
-                        {/* Floating Tech Skill Cards - Fixed Positioning */}
+                        {/* Inner Circle Background */}
+                        <motion.div
+                            className="absolute rounded-full bg-background/60 backdrop-blur-sm border border-brand-green/10"
+                            style={{
+                                width: 'clamp(280px, 50vw, 390px)',
+                                height: 'clamp(280px, 50vw, 390px)',
+                            }}
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 1.3, delay: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
+                        >
+                            {/* Pulsing glow inside */}
+                            <motion.div
+                                className="absolute inset-0 rounded-full bg-brand-green/5 blur-2xl"
+                                animate={{ scale: [1, 1.08, 1], opacity: [0.3, 0.5, 0.3] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            />
+                        </motion.div>
+
+                        {/* Circle Image Container - clips the image to circle, no legs */}
+                        <motion.div
+                            className="relative rounded-full overflow-hidden border-[3px] border-brand-green/25 shadow-[0_0_60px_rgba(91,194,130,0.15),0_0_120px_rgba(91,194,130,0.05)]"
+                            style={{
+                                width: 'clamp(260px, 48vw, 370px)',
+                                height: 'clamp(260px, 48vw, 370px)',
+                            }}
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 1.2, delay: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+                        >
+                            {/* Inner gradient overlay for depth */}
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent via-transparent to-background/30 z-10 pointer-events-none" />
+
+                            {/* Subtle animated shine */}
+                            <motion.div
+                                className="absolute inset-0 z-20 pointer-events-none rounded-full"
+                                style={{
+                                    background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%, transparent 100%)',
+                                }}
+                                animate={{ opacity: [0.5, 0.8, 0.5] }}
+                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            />
+
+                            <motion.img
+                                src={banner_img.src}
+                                alt="Shubham Paghadal"
+                                className="w-full h-full object-cover object-top"
+                                style={{
+                                    objectPosition: 'center 15%',
+                                    filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))',
+                                }}
+                                animate={{ y: [0, -3, 0] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            />
+                        </motion.div>
+
+                        {/* Orbiting small dots on the outer ring */}
+                        {[0, 90, 180, 270].map((deg, i) => (
+                            <motion.div
+                                key={`dot-${i}`}
+                                className="absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-brand-green/60"
+                                style={{
+                                    top: '50%',
+                                    left: '50%',
+                                }}
+                                animate={{
+                                    rotate: [deg, deg + 360],
+                                }}
+                                transition={{
+                                    duration: 20 + i * 5,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
+                            >
+                                <motion.div
+                                    className="w-full h-full rounded-full bg-brand-green"
+                                    style={{
+                                        transform: `translateX(clamp(160px, 29vw, 230px))`,
+                                        boxShadow: '0 0 8px rgba(91, 194, 130, 0.6)',
+                                    }}
+                                    animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
+                                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+                                />
+                            </motion.div>
+                        ))}
+
+                        {/* Floating Tech Skill Cards - Diamond Layout around circle */}
                         {[
-                            { name: 'React.js', icon: 'React', color: 'brand-green', experience: '1.5 Yrs', position: 'top-[8%] left-0 sm:left-[-5%] lg:left-[-8%]', delay: 0.6 },
-                            { name: 'JavaScript', icon: 'JS', color: 'brand-yellow', experience: 'Expert', position: 'top-[32%] right-0 sm:right-[-5%] lg:right-[-8%]', delay: 0.8 },
-                            { name: 'VS Code', icon: <VscVscode className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />, color: 'blue-500', experience: 'Daily', position: 'bottom-[28%] left-0 sm:left-[-5%] lg:left-[-8%]', delay: 1.0 },
-                            { name: 'Next JS', icon: <SiNextdotjs className="w-5 h-5 sm:w-6 sm:h-6 text-Balck-400" />, color: 'green-500', experience: 'Pro', position: 'bottom-[8%] right-0 sm:right-[-5%] lg:right-[-8%]', delay: 1.2 }
+                            {
+                                name: 'React.js', icon: 'React', experience: '1.5 Yrs', delay: 0.6,
+                                pos: { top: '-110px', left: '50%', transform: 'translateX(-50%)' }
+                            },
+                            {
+                                name: 'JavaScript', icon: 'JS', experience: 'Expert', delay: 0.8,
+                                pos: { top: '50%', right: '-130px', transform: 'translateY(-50%)' }
+                            },
+                            {
+                                name: 'VS Code', icon: <VscVscode className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />, experience: 'Daily', delay: 1.0,
+                                pos: { top: '50%', left: '-130px', transform: 'translateY(-50%)' }
+                            },
+                            {
+                                name: 'Next JS', icon: <SiNextdotjs className="w-5 h-5 sm:w-6 sm:h-6 text-white" />, experience: 'Pro', delay: 1.2,
+                                pos: { bottom: '-110px', left: '50%', transform: 'translateX(-50%)' }
+                            }
                         ].map((skill, index) => (
                             <motion.div
                                 key={skill.name}
-                                className={`absolute ${skill.position} z-20 group cursor-pointer`}
-                                initial={{ opacity: 0, scale: 0, rotate: -10 }}
-                                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                                className="absolute z-20 group cursor-pointer"
+                                style={skill.pos}
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{
                                     duration: 0.6,
                                     delay: skill.delay,
@@ -315,10 +294,8 @@ export default function Home() {
                                 }}
                             >
                                 <motion.div
-                                    className="relative bg-brand-dark/90 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 lg:p-4 border border-white/10 shadow-xl min-w-[90px] sm:min-w-[110px] lg:min-w-[130px]"
-                                    animate={{
-                                        y: [0, -10, 0],
-                                    }}
+                                    className="relative bg-brand-dark/90 backdrop-blur-xl rounded-2xl p-2.5 sm:p-3 lg:p-4 border border-white/10 shadow-xl min-w-[90px] sm:min-w-[110px] lg:min-w-[130px]"
+                                    animate={{ y: [0, -8, 0] }}
                                     transition={{
                                         duration: 3 + (index * 0.5),
                                         repeat: Infinity,
@@ -326,87 +303,52 @@ export default function Home() {
                                         delay: index * 0.2
                                     }}
                                     whileHover={{
-                                        scale: 1.08,
-                                        rotateZ: index % 2 === 0 ? 3 : -3,
-                                        borderColor: `rgba(91, 194, 130, 0.5)`,
-                                        boxShadow: `0 20px 50px rgba(91, 194, 130, 0.3)`,
+                                        scale: 1.1,
+                                        borderColor: 'rgba(91, 194, 130, 0.5)',
+                                        boxShadow: '0 20px 50px rgba(91, 194, 130, 0.3)',
                                         transition: { duration: 0.3 }
                                     }}
                                 >
-                                    {/* Card Content */}
-                                    <div className="flex flex-col items-center gap-1 sm:gap-2">
-                                        {/* Icon/Text */}
+                                    <div className="flex flex-col items-center gap-1 sm:gap-1.5">
                                         <div className="text-xl sm:text-2xl font-bold">
                                             {typeof skill.icon === 'string' ? skill.icon : skill.icon}
                                         </div>
-
-                                        {/* Skill Name */}
                                         <div className="text-[10px] sm:text-xs font-semibold text-white/90 text-center">
                                             {skill.name}
                                         </div>
-
-                                        {/* Experience Badge */}
                                         <div className="text-[8px] sm:text-[10px] px-2 py-0.5 rounded-full bg-brand-green/20 text-brand-green font-medium">
                                             {skill.experience}
                                         </div>
                                     </div>
 
                                     {/* Glow Effect */}
-                                    <div className={`absolute inset-0 rounded-2xl sm:rounded-3xl bg-linear-to-br from-brand-green/0 to-brand-green/0 group-hover:from-brand-green/10 group-hover:to-brand-yellow/10 transition-all duration-500 blur-sm`} />
+                                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-green/0 to-brand-green/0 group-hover:from-brand-green/10 group-hover:to-brand-yellow/10 transition-all duration-500 blur-sm" />
 
-                                    {/* Floating Progress Indicator */}
+                                    {/* Status dot */}
                                     <motion.div
-                                        className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-brand-green rounded-full border-2 border-brand-dark"
-                                        animate={{
-                                            scale: [1, 1.2, 1],
-                                            opacity: [1, 0.6, 1]
-                                        }}
-                                        transition={{
-                                            duration: 2,
-                                            repeat: Infinity,
-                                            delay: index * 0.3
-                                        }}
+                                        className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-brand-green rounded-full border-2 border-brand-dark"
+                                        animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
+                                        transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
                                     />
                                 </motion.div>
-
-                                {/* Connecting Line - Hidden on mobile for cleaner look */}
-                                <svg className="hidden sm:block absolute top-1/2 left-1/2 w-[150px] lg:w-[200px] h-[150px] lg:h-[200px] pointer-events-none opacity-15" style={{ transform: 'translate(-50%, -50%)' }}>
-                                    <motion.line
-                                        x1="75"
-                                        y1="75"
-                                        x2={index % 2 === 0 ? "120" : "30"}
-                                        y2={index < 2 ? "30" : "120"}
-                                        stroke="url(#gradient)"
-                                        strokeWidth="1"
-                                        initial={{ pathLength: 0 }}
-                                        animate={{ pathLength: 1 }}
-                                        transition={{ duration: 1.5, delay: skill.delay + 0.3 }}
-                                    />
-                                    <defs>
-                                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stopColor="rgba(91, 194, 130, 0.5)" />
-                                            <stop offset="100%" stopColor="rgba(252, 203, 110, 0.5)" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
                             </motion.div>
                         ))}
 
                         {/* Floating Particles */}
                         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                            {[...Array(12)].map((_, i) => (
+                            {[...Array(10)].map((_, i) => (
                                 <motion.div
                                     key={i}
                                     className="absolute w-1 h-1 rounded-full"
                                     style={{
-                                        background: i % 2 === 0 ? 'rgba(91, 194, 130, 0.4)' : 'rgba(252, 203, 110, 0.4)',
-                                        left: `${20 + (Math.random() * 60)}%`,
-                                        top: `${20 + (Math.random() * 60)}%`,
+                                        background: i % 2 === 0 ? 'rgba(91, 194, 130, 0.5)' : 'rgba(252, 203, 110, 0.5)',
+                                        left: `${15 + (Math.random() * 70)}%`,
+                                        top: `${15 + (Math.random() * 70)}%`,
                                     }}
                                     animate={{
-                                        y: [0, -50, 0],
-                                        x: [0, Math.random() * 20 - 10, 0],
-                                        opacity: [0, 1, 0],
+                                        y: [0, -40, 0],
+                                        x: [0, Math.random() * 15 - 7, 0],
+                                        opacity: [0, 0.8, 0],
                                         scale: [0, 1.5, 0],
                                     }}
                                     transition={{
@@ -418,36 +360,6 @@ export default function Home() {
                                 />
                             ))}
                         </div>
-
-                        {/* Circular Progress Ring */}
-                        <motion.div
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] pointer-events-none"
-                            initial={{ opacity: 0, rotate: 0 }}
-                            animate={{ opacity: 0.08, rotate: 360 }}
-                            transition={{
-                                opacity: { delay: 1.5, duration: 1 },
-                                rotate: { duration: 60, repeat: Infinity, ease: "linear" }
-                            }}
-                        >
-                            <svg className="w-full h-full" viewBox="0 0 100 100">
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="45"
-                                    fill="none"
-                                    stroke="url(#ringGradient)"
-                                    strokeWidth="0.2"
-                                    strokeDasharray="5 5"
-                                />
-                                <defs>
-                                    <linearGradient id="ringGradient">
-                                        <stop offset="0%" stopColor="rgba(91, 194, 130, 0.6)" />
-                                        <stop offset="50%" stopColor="rgba(252, 203, 110, 0.6)" />
-                                        <stop offset="100%" stopColor="rgba(91, 194, 130, 0.6)" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </motion.div>
                     </div>
                 </motion.div>
             </section>

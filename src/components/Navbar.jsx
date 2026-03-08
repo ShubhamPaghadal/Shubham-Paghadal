@@ -29,8 +29,6 @@ export default function Navbar() {
     const socialLinks = [
         { Icon: FaGithub, href: "https://github.com/ShubhamPaghadal" },
         { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/paghadal-shubham-4b0246380/" },
-        { Icon: FaBehance, href: "#" },
-        { Icon: FaDribbble, href: "#" },
         { Icon: FaAndroid, href: "#" },
     ];
 

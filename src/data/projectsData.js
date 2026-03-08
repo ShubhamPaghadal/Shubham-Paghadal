@@ -21,7 +21,7 @@ const projectsData = [
         images: [dental_bridge, dental_bridge_2],
         badge: "LIVE",
         badgeColor: "brand-green",
-        liveLink: "#",
+        liveLink: "https://www.dentalbridgegpo.com/",
         technologies: ["React.js", "Next.js", "Tailwind CSS", "Node.js", "MongoDB"]
     },
     {
@@ -43,7 +43,7 @@ Customers can select fabric, colors, and styles according to their preference.
         layout: "reverse",
         badge: "NEW",
         badgeColor: "brand-yellow",
-        liveLink: "#",
+        liveLink: "https://asap-customisation-frontend.vercel.app/login",
         technologies: ["React.js", "JavaScript", "CSS3", "REST API", "Firebase"]
     },
     {
@@ -63,7 +63,7 @@ Customers can select fabric, colors, and styles according to their preference.
         images: [rankers_erp, rankers_erp_2],
         badge: "LIVE",
         badgeColor: "brand-green",
-        liveLink: "#",
+        liveLink: "https://rankers-erp.vercel.app/login",
         technologies: ["React.js", "Next.js", "Tailwind CSS", "Express.js", "MySQL"]
     }
 ];

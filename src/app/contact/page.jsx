@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane, FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import Footer from '@/components/Footer';
 
 export default function Contact() {
@@ -101,18 +101,19 @@ export default function Contact() {
                         </div>
 
                         {/* Social Sidebar Style */}
-                        <div className="pt-10 border-t border-white/5">
-                            <h3 className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-6">Follow Me</h3>
+                        <div className="flex items-center justify-center gap- pt-10 border-t border-white/5">
+                            <h3 className="text-gray-500 text-sm font-medium uppercase tracking-wider  mr-2 ">Follow Me :-  </h3>
                             <div className="flex gap-4">
-                                {['Github', 'Linkedin', 'Instagram'].map((social) => (
-                                    <a
-                                        key={social}
-                                        href="#"
-                                        className="text-gray-400 hover:text-brand-green transition-colors text-sm font-medium border-b border-transparent hover:border-brand-green pb-1"
-                                    >
-                                        {social}
-                                    </a>
-                                ))}
+                                <a href="https://www.linkedin.com/in/paghadal-shubham-4b0246380/" target="_blank" rel="noopener noreferrer">
+                                    <FaLinkedinIn className="text-brand-green text-xl" />
+                                </a>
+
+                                <a href="https://github.com/ShubhamPaghadal" target="_blank" rel="noopener noreferrer">
+                                    <FaGithub className="text-brand-green text-xl" />
+                                </a>
+                                <a href="https://www.instagram.com/shubham_paghadal_/" target="_blank" rel="noopener noreferrer">
+                                    <FaInstagram className="text-brand-green text-xl" />
+                                </a>
                             </div>
                         </div>
                     </motion.div>
