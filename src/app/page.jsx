@@ -232,35 +232,7 @@ export default function Home() {
                             />
                         </motion.div>
 
-                        {/* Orbiting small dots on the outer ring */}
-                        {[0, 90, 180, 270].map((deg, i) => (
-                            <motion.div
-                                key={`dot-${i}`}
-                                className="absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-brand-green/60"
-                                style={{
-                                    top: '50%',
-                                    left: '50%',
-                                }}
-                                animate={{
-                                    rotate: [deg, deg + 360],
-                                }}
-                                transition={{
-                                    duration: 20 + i * 5,
-                                    repeat: Infinity,
-                                    ease: "linear",
-                                }}
-                            >
-                                <motion.div
-                                    className="w-full h-full rounded-full bg-brand-green"
-                                    style={{
-                                        transform: `translateX(clamp(160px, 29vw, 230px))`,
-                                        boxShadow: '0 0 8px rgba(91, 194, 130, 0.6)',
-                                    }}
-                                    animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
-                                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
-                                />
-                            </motion.div>
-                        ))}
+
 
                         {/* Floating Tech Skill Cards - Diamond Layout around circle */}
                         {[
