@@ -99,7 +99,7 @@ export default function Home() {
 
                 {/* Right Image Section - Circular Design */}
                 <motion.div
-                    className="w-full lg:w-1/2 flex items-center justify-center relative mt-16 sm:mt-20 lg:mt-8 min-h-[500px] sm:min-h-[600px] lg:min-h-[530px]"
+                    className="w-full lg:w-1/2 flex items-center justify-center relative mt-12 sm:mt-20 lg:mt-8 min-h-[450px] sm:min-h-[600px] lg:min-h-[530px] px-12 sm:px-16 lg:px-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -238,19 +238,19 @@ export default function Home() {
                         {[
                             {
                                 name: 'React.js', icon: 'React', experience: '1.5 Yrs', delay: 0.6,
-                                pos: { top: '-110px', left: '50%', transform: 'translateX(-50%)' }
+                                pos: { top: 'clamp(-70px, -8vw, -110px)', left: '50%', transform: 'translateX(-50%)' }
                             },
                             {
                                 name: 'JavaScript', icon: 'JS', experience: 'Expert', delay: 0.8,
-                                pos: { top: '50%', right: '-130px', transform: 'translateY(-50%)' }
+                                pos: { top: '50%', right: 'clamp(-60px, -8vw, -130px)', transform: 'translateY(-50%)' }
                             },
                             {
                                 name: 'VS Code', icon: <VscVscode className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />, experience: 'Daily', delay: 1.0,
-                                pos: { top: '50%', left: '-130px', transform: 'translateY(-50%)' }
+                                pos: { top: '50%', left: 'clamp(-60px, -8vw, -130px)', transform: 'translateY(-50%)' }
                             },
                             {
                                 name: 'Next JS', icon: <SiNextdotjs className="w-5 h-5 sm:w-6 sm:h-6 text-white" />, experience: 'Pro', delay: 1.2,
-                                pos: { bottom: '-110px', left: '50%', transform: 'translateX(-50%)' }
+                                pos: { bottom: 'clamp(-70px, -8vw, -110px)', left: '50%', transform: 'translateX(-50%)' }
                             }
                         ].map((skill, index) => (
                             <motion.div

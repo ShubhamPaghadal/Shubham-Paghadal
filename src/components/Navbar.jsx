@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaGithub, FaBehance, FaLinkedinIn, FaDribbble, FaAndroid, FaHome, FaLayerGroup, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaHome, FaLayerGroup, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import header_logo from '../../public/assets/Header_logo.png'
@@ -29,7 +29,7 @@ export default function Navbar() {
     const socialLinks = [
         { Icon: FaGithub, href: "https://github.com/ShubhamPaghadal" },
         { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/paghadal-shubham-4b0246380/" },
-        { Icon: FaAndroid, href: "#" },
+        { Icon: FaInstagram, href: "https://www.instagram.com/shubham_paghadal_/" },
     ];
 
     return (
