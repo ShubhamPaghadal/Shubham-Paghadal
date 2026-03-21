@@ -2,9 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { SiUpwork, SiGreensock, SiNextdotjs } from 'react-icons/si';
+import { SiUpwork, SiGreensock, SiNextdotjs, SiJavascript, SiNestjs, SiNodedotjs } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
-import { FaGem, FaLinkedinIn, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaGem, FaLinkedinIn, FaInstagram, FaTwitter, FaGithub, FaReact } from 'react-icons/fa';
 import banner_img from '../../public/assets/banner_img.png'
 import WorkTogether from '@/components/WorkTogether';
 import Footer from '@/components/Footer';
@@ -99,7 +99,7 @@ export default function Home() {
 
                 {/* Right Image Section - Circular Design */}
                 <motion.div
-                    className="w-full lg:w-1/2 flex items-center justify-center relative mt-12 sm:mt-20 lg:mt-8 min-h-[450px] sm:min-h-[600px] lg:min-h-[530px] px-12 sm:px-16 lg:px-0"
+                    className="w-full lg:w-1/2 flex items-center justify-center relative mt-12 sm:mt-20 lg:mt-8 min-h-[450px] sm:min-h-[600px] lg:min-h-[530px] px-12 sm:px-16 lg:px-0 !mx-5"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -237,25 +237,25 @@ export default function Home() {
                         {/* Floating Tech Skill Cards - Diamond Layout around circle */}
                         {[
                             {
-                                name: 'React.js', icon: 'React', experience: '1.5 Yrs', delay: 0.6,
-                                pos: { top: 'clamp(-70px, -8vw, -110px)', left: '50%', transform: 'translateX(-50%)' }
+                                name: 'React.js', icon: <FaReact className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />, experience: '1.5 Yrs', delay: 0.6,
+                                pos: { top: 'clamp(-120px, -8vw, -110px)', left: '40%', transform: 'translateX(-50%)' }
                             },
                             {
-                                name: 'JavaScript', icon: 'JS', experience: 'Expert', delay: 0.8,
-                                pos: { top: '50%', right: 'clamp(-60px, -8vw, -130px)', transform: 'translateY(-50%)' }
+                                name: 'JavaScript', icon: <SiJavascript className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />, experience: 'Expert', delay: 0.8,
+                                pos: { top: '50%', right: 'clamp(-130px, -8vw, -130px)', transform: 'translateY(-50%)' }
                             },
                             {
-                                name: 'VS Code', icon: <VscVscode className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />, experience: 'Daily', delay: 1.0,
-                                pos: { top: '50%', left: 'clamp(-60px, -8vw, -130px)', transform: 'translateY(-50%)' }
+                                name: 'Node  JS', icon: <SiNodedotjs className="w-5 h-5 sm:w-6 sm:h-6 text-green-700" />, experience: 'Daily', delay: 1.0,
+                                pos: { top: '50%', left: 'clamp(-130px, -8vw, -130px)', transform: 'none', opacity: 1 }
                             },
                             {
                                 name: 'Next JS', icon: <SiNextdotjs className="w-5 h-5 sm:w-6 sm:h-6 text-white" />, experience: 'Pro', delay: 1.2,
-                                pos: { bottom: 'clamp(-70px, -8vw, -110px)', left: '50%', transform: 'translateX(-50%)' }
+                                pos: { bottom: 'clamp(-110px, -8vw, -110px)', left: '40%', transform: 'translateX(-50%)' }
                             }
                         ].map((skill, index) => (
                             <motion.div
                                 key={skill.name}
-                                className="absolute z-20 group cursor-pointer"
+                                className="absolute z-20 group cursor-pointer max-sm:hidden"
                                 style={skill.pos}
                                 initial={{ opacity: 0, scale: 0 }}
                                 animate={{ opacity: 1, scale: 1 }}
