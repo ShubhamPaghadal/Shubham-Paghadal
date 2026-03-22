@@ -231,9 +231,9 @@ export default function Home() {
                                 }}
                                 initial={{ y: "100%", opacity: 0 }}
                                 animate={imageEntered ? { y: [0, -8, 0], opacity: 1 } : { y: "0%", opacity: 1 }}
-                                transition={imageEntered 
-                                    ? { duration: 5, repeat: Infinity, ease: "easeInOut" } 
-                                    : { duration: 2.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }
+                                transition={imageEntered
+                                    ? { duration: 5, repeat: Infinity, ease: "easeInOut" }
+                                    : { duration: 3.5, delay: 1, ease: [0.16, 1, 0.3, 1] }
                                 }
                                 onAnimationComplete={() => setImageEntered(true)}
                             />
