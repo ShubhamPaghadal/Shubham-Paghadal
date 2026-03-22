@@ -351,7 +351,7 @@ export default function Home() {
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="btn-shimmer btn-glow-border bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300"
+                        className="btn-shimmer btn-glow-border bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 cursor-pointer"
                     >
                         View All
                     </motion.button>
