@@ -77,7 +77,7 @@ export default function Home() {
                         Paghadal
                     </motion.h1>
 
-                    <motion.p variants={fadeInUp} className="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed px-4 lg:px-0 max-[1200px]:w-[95%]">
+                    <motion.p variants={fadeInUp} className="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed px-4 lg:px-0 max-[1200px]:w-[80%]">
                         Since beginning my journey as a Frontend Software Engineer 1 year ago, I’ve worked on building responsive and user-friendly web applications. I’ve collaborated with teams to develop multiple websites including e-commerce platforms, doctor portals, and business management systems.
                     </motion.p>
 
@@ -299,7 +299,7 @@ export default function Home() {
                                     {/* Status dot */}
                                     <motion.div
                                         className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-brand-green rounded-full border-2 border-brand-dark"
-                                        animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
+                                        animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }} s
                                         transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
                                     />
                                 </motion.div>
