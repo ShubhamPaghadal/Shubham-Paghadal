@@ -39,7 +39,11 @@ export default function Navbar() {
                 <div className="max-w-[1400px] mx-auto flex items-center justify-between">
                     {/* Logo Area */}
                     <div className="shrink-0 z-110">
-                        <Link href="/" className="flex items-center gap-1.5 group" onClick={() => setIsOpen(false)}>
+                        <Link href="/" className="flex items-center gap-1.5 group" onClick={(e) => {
+                            e.preventDefault();
+                            setIsOpen(false);
+                            window.location.href = "/";
+                        }}>
                             <motion.img
                                 src={header_logo.src}
                                 alt="S"
@@ -141,10 +145,14 @@ export default function Navbar() {
                     >
                         {/* Overlay Header */}
                         <div className="flex items-center justify-between px-4 sm:px-8 py-6 border-b border-white/5">
-                            <div className="flex items-center gap-1.5">
-                                <img src={header_logo.src} alt="S" className="w-9 h-9 sm:w-11" />
-                                <span className="text-xl sm:text-2xl logo-font pt-1 text-white">shubham Paghadal</span>
-                            </div>
+                                <Link href="/" className="flex items-center gap-1.5" onClick={(e) => {
+                                    e.preventDefault();
+                                    setIsOpen(false);
+                                    window.location.href = "/";
+                                }}>
+                                    <img src={header_logo.src} alt="S" className="w-9 h-9 sm:w-11" />
+                                    <span className="text-xl sm:text-2xl logo-font pt-1 text-white">shubham Paghadal</span>
+                                </Link>
 
                             <button
                                 onClick={() => setIsOpen(false)}

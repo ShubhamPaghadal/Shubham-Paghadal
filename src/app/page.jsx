@@ -38,6 +38,8 @@ export default function Home() {
         }
     };
 
+    const [imageEntered, setImageEntered] = React.useState(false);
+
     return (
         <div className="min-h-screen bg-background text-white overflow-hidden relative font-sans">
             {/* Background Image Layer */}
@@ -227,8 +229,13 @@ export default function Home() {
                                     objectPosition: 'center 15%',
                                     filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))',
                                 }}
-                                animate={{ y: [0, -3, 0] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                                initial={{ y: "100%", opacity: 0 }}
+                                animate={imageEntered ? { y: [0, -8, 0], opacity: 1 } : { y: "0%", opacity: 1 }}
+                                transition={imageEntered 
+                                    ? { duration: 5, repeat: Infinity, ease: "easeInOut" } 
+                                    : { duration: 2.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }
+                                }
+                                onAnimationComplete={() => setImageEntered(true)}
                             />
                         </motion.div>
 
